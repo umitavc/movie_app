@@ -28,7 +28,10 @@ extension ThemeExtension on BuildContext {
   TextTheme get textTheme => theme.textTheme;
   ColorScheme get colors => theme.colorScheme;
 }
-
+extension PaddingExtensionDefault on BuildContext {
+  EdgeInsets get paddingDefault=> const EdgeInsets.symmetric(horizontal: 16, vertical: 12);
+ 
+}
 extension PaddingExtensionAll on BuildContext {
   EdgeInsets get paddingLow => EdgeInsets.all(lowValue);
   EdgeInsets get paddingNormal => EdgeInsets.all(normalValue);
