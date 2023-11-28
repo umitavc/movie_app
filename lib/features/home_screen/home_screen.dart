@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/enums/custom_text_style_enum/custom_text_style_enum.dart';
 import 'package:movie_app/core/extensions/context_extension.dart';
@@ -6,6 +7,7 @@ import 'package:movie_app/data/models/movies_model.dart';
 import 'package:movie_app/features/components/text/custom_text_widget.dart';
 import 'package:movie_app/features/home_screen/widgets/movies_slider.dart';
 import 'package:movie_app/features/home_screen/widgets/trendler_slider.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

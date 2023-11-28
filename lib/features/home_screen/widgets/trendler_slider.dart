@@ -1,7 +1,9 @@
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/constants/api_constants.dart';
 import 'package:movie_app/core/extensions/context_extension.dart';
+import 'package:movie_app/features/home_screen/movies_detail_screen.dart';
 
 class TrendlerSlider extends StatelessWidget {
   const TrendlerSlider({super.key, required this.snapshot});
@@ -23,15 +25,20 @@ class TrendlerSlider extends StatelessWidget {
               autoPlayAnimationDuration: const Duration(seconds: 1),
             ),
             itemBuilder: (context, itemIndex, pageViwIndex) {
-              return ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: SizedBox(
-                  width: context.width,
-                  height: context.height * 0.3,
-                  child: Image.network(
-                    '${Constants.imagePath}${snapshot.data[itemIndex].posterPath}',
-                    fit: BoxFit.cover,
-                    filterQuality: FilterQuality.high,
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MoviesDetailScreen(movie: snapshot.data[itemIndex],))); 
+                } ,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: SizedBox(
+                    width: context.width,
+                    height: context.height * 0.3,
+                    child: Image.network(
+                      '${Constants.imagePath}${snapshot.data[itemIndex].posterPath}',
+                      fit: BoxFit.cover,
+                      filterQuality: FilterQuality.high,
+                    ),
                   ),
                 ),
               );
