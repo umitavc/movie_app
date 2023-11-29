@@ -1,14 +1,16 @@
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/enums/custom_text_style_enum/custom_text_style_enum.dart';
 import 'package:movie_app/core/extensions/context_extension.dart';
+import 'package:movie_app/core/routers/app_router.dart';
 import 'package:movie_app/core/services/api_services.dart';
 import 'package:movie_app/data/models/movies_model.dart';
 import 'package:movie_app/features/components/text/custom_text_widget.dart';
 import 'package:movie_app/features/home_screen/widgets/movies_slider.dart';
 import 'package:movie_app/features/home_screen/widgets/trendler_slider.dart';
 
-
+@RoutePage()  
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -73,10 +75,28 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 16,
             ),
-            const CustomTextWidget(
-              text: 'Top rated movies',
-              style: CustomTextStyleEnum.s20w400,
-              textColor: Colors.white,
+              Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const CustomTextWidget(
+                  text: 'Top rated movies',
+                  style: CustomTextStyleEnum.s20w400,
+                  textColor: Colors.white,
+                ),
+                InkWell(
+                 
+                 
+                  onTap: () {
+                   context.router.push(const RatedSeeAllRoute());
+                  
+                  },
+                  child: const CustomTextWidget(
+                    text: 'See all',
+                    style: CustomTextStyleEnum.s18w400,
+                    textColor: Colors.white,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 16,
@@ -99,10 +119,20 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 16,
             ),
-            const CustomTextWidget(
-              text: 'Top rated movies',
-              style: CustomTextStyleEnum.s20w400,
-              textColor: Colors.white,
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                 CustomTextWidget(
+                  text: 'Upcoming movies',
+                  style: CustomTextStyleEnum.s20w400,
+                  textColor: Colors.white,
+                ),
+                CustomTextWidget(
+                  text: 'See all',
+                  style: CustomTextStyleEnum.s18w400,
+                  textColor: Colors.white,
+                ),
+              ],
             ),
             const SizedBox(
               height: 16,
