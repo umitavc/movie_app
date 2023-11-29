@@ -6,7 +6,7 @@ import 'package:movie_app/core/extensions/context_extension.dart';
 import 'package:movie_app/core/routers/app_router.dart';
 import 'package:movie_app/core/services/api_services.dart';
 import 'package:movie_app/data/models/movies_model.dart';
-import 'package:movie_app/features/components/shimmer_effect.dart';
+import 'package:movie_app/features/components/shimmer_effect/shimmer_effect.dart';
 import 'package:movie_app/features/components/text/custom_text_widget.dart';
 import 'package:movie_app/features/home_screen/widgets/movies_slider.dart';
 import 'package:movie_app/features/home_screen/widgets/trendler_slider.dart';
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         snapshot: snapshot,
                       );
                     } else {
-                      return  getTrendingShimmerLoading();
+                      return getTrendingShimmerLoading();
                     }
                   }),
             ),

@@ -81,13 +81,13 @@ Shimmer getRatedShimmerLoading() {
         ),
          Container(
           height: 170,
-          width: 150,
+          width: 47,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             color: Colors.white,
           ),
         ),
-
+    
         
       ],
     ),
@@ -125,13 +125,13 @@ Shimmer getUpComingShimmerLoading() {
         ),
          Container(
           height: 170,
-          width: 150,
+          width: 47,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             color: Colors.white,
           ),
         ),
-
+    
         
       ],
     ),
