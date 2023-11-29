@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RatedSeeAllScreen(),
       );
     },
+    UpcomingMoviesRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const UpcomingMoviesScreen(),
+      );
+    },
   };
 }
 
@@ -54,6 +60,20 @@ class RatedSeeAllRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RatedSeeAllRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [UpcomingMoviesScreen]
+class UpcomingMoviesRoute extends PageRouteInfo<void> {
+  const UpcomingMoviesRoute({List<PageRouteInfo>? children})
+      : super(
+          UpcomingMoviesRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'UpcomingMoviesRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

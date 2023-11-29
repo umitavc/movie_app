@@ -119,18 +119,23 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 16,
             ),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 CustomTextWidget(
+                 const CustomTextWidget(
                   text: 'Upcoming movies',
                   style: CustomTextStyleEnum.s20w400,
                   textColor: Colors.white,
                 ),
-                CustomTextWidget(
-                  text: 'See all',
-                  style: CustomTextStyleEnum.s18w400,
-                  textColor: Colors.white,
+                InkWell(
+                  onTap: () {
+                   context.router.push(const UpcomingMoviesRoute());
+                  },
+                  child: const CustomTextWidget(
+                    text: 'See all',
+                    style: CustomTextStyleEnum.s18w400,
+                    textColor: Colors.white,
+                  ),
                 ),
               ],
             ),
