@@ -6,6 +6,7 @@ import 'package:movie_app/core/services/api_services.dart';
 import 'package:movie_app/data/models/movies_model.dart';
 import 'package:movie_app/features/components/dialog/custom_dialog_widget.dart';
 import 'package:movie_app/features/components/text/custom_text_widget.dart';
+import 'package:movie_app/features/home_screen/widgets/filter_subtitle_widget.dart';
 import 'package:movie_app/features/home_screen/widgets/top_rated.dart';
 
 @RoutePage()
@@ -46,13 +47,7 @@ class _RatedSeeAllScreenState extends State<RatedSeeAllScreen> {
                   title: 'Filter',
                   nextRouteButtonText: 'Save',
                   subtitles: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CustomTextWidget(text: 'Rating', style: CustomTextStyleEnum.s18w500, textColor: Colors.black),
-                        Icon(Icons.circle_outlined)
-                      ],
-                    ),
+                    FilterSubTitleWidget(),
                   ],
                   isActive: true,
                   onPressedButton: () {

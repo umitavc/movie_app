@@ -15,7 +15,7 @@ class SearchBarWidget extends StatelessWidget {
     return TextField(
       //onChanged: onChanged,
       //controller: controller,
-      style: const TextStyle(fontSize: 12),
+      style: const TextStyle(fontSize: 14, color: Colors.white),
       textAlignVertical: TextAlignVertical.center,
       cursorColor: Colors.white,
       cursorWidth: 1.5,
